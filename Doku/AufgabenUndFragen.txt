@@ -1,0 +1,91 @@
+1. Was versteht man unter einer graﬁscher Benutzeroberﬂäche?
+Grafisches Programm, welches auf Eingaben von User reagieren kann.
+Darstellung von verschiedenen Komponenten (Buttons, TextFields, ComboBoxes etc)
+
+
+
+2. Was versteht man unter folgenden GUI Komponenten: JLabel,
+JTextField, JButton und JFrame?
+
+JLabel ist ein Komponent mit Text Inhalt. Kann auch Icons enthalten. Steht meistens vor TextFields
+um TextField zu beschreiben, etc.
+
+JTextField ist ein Eingabe Feld für den User. User kann hier per Tastatur Text eingeben, welcher weiter 
+verarbeitet werden kann. Event trigger ist hier die Enter Taste
+
+JButton ist eine klassische Nutzfläche zum bestätigen/ auslösen von Nutzereingaben. 
+Knop-Schaltfläche
+
+JFrame ist das generelle Fenster worauf die ganzen obigen Nutzflächen ihren Platz finden.
+
+
+3. Was versteht man unter einem LayoutManager?
+Verwaltung des zur Verfügung stehenden Raumes der Oberfläche.
+Kann verschachtelt sein.
+LayoutManager setzt die Organisation/ die Reihenfolge der einzelnen Komponenten auf JFrame fest.
+
+
+4. Erläutern Sie neben dem BorderLayout-Manager kurz 2 weitere
+LayoutManager?
+
+BorderLayout = Anordnung des Frames in 5 Bereiche -> In Norden, Süden, Osten, Weste und Mitte
+Grundlegende Infos wäre dann also im Norden beispielsweise, der Footer im Süde, ein Menü im Osten und Werbung
+im Westen. Hauptinhalt wäre demnach in der Mitte darstellbar.
+
+FlowLayout = Ordnet die Komponente in einem Flow entweder von links nach rechts oder oben nach unten.
+Versucht den Platz immer opitmal auszunutzen, wenn Fenster verschoben wird.
+
+GridLayout = Hiermit kann das ausgewählte Frame/ Panel in Reihen und Spalten einteilen. 
+
+
+5. Erklären Sie das Zusammenspiel zwischen GUI-Komponenten und
+LayoutManager konkret anhand von 2 Buttons und dem Flow-
+LayoutManager.
+
+Der FlowLayoutManager würde 2 Buttons standardmäßig nebeneinander anzeigen von links nach rechts.
+Wenn der Benutzer nun das Fenster verkleinert und die Breite des Fensters kleiner ist als die Breite beider Buttons addiert.
+So springt der 2. Button nach unten.
+
+
+
+--------------------------------------------
+
+
+1. Was versteht man unter einer anonymen Klasse?
+
+Das Aufrufen einer namenlosen Klasse z.B. im Gui Code. Gleichzeitiges Aufrufen
+und initialisieren der Klasse.
+dem Button wird per addActionListener ein neues Objekt der Klasse ActionListener hinzugefügt
+und die Implementierung der Methode erfolgt direkt. Schafft besserer Übersichtlichkeit!
+
+
+2. Geben Sie ein Beispiel in Java für eine anonyme Klasse!
+
+buttonReset3.addActionListener(new ActionListener() {
+			
+			@Override 
+			public void actionPerformed(ActionEvent e) {
+				label.setText("Rückmeldung");
+			}
+		});
+
+3. Was versteht man unter einem Lambda-Ausdruck?
+
+Lambda Ausdrücke sind quasi Methoden ohne Namen. Bei Klassen wie zum Beispiel der ActionListener Klasse
+wo nur eine Methode besteht kann man direkt per Lambda Ausdruck auf das erstellte Objekt der ActionListener Klasse zugreifen. Hier im
+Beispiel wäre es das Objekt e
+-> ist der Lambda operator, im Beispiel wird bei Button-click der label Text auf "Rückmeldung" gesetzt.
+
+	
+
+4. Geben Sie ein Beispiel für einen Lambda-Ausdruck mit 2 Parametern und einem passendem Funktionsinterface.
+
+	this.calculate((int x, int y) -> x + y);
+	
+	??
+
+
+
+
+
+
